@@ -1,0 +1,75 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# =========================================================================
+# Seção de temas - Importe o tema que você deseja usar aqui
+# =========================================================================
+
+# Para usar o tema Doom One, por exemplo:
+[general]
+import = ["~/.config/alacritty/themes/doom_one.toml"]
+
+# Se você quiser mudar para o Dracula, mude a linha acima para:
+# import = ["~/.config/alacritty/themes/dracula.toml"]
+
+# =========================================================================
+# Resto da configuração
+# =========================================================================
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+dimensions = { columns = 100, lines = 35}
+padding = { x = 6, y = 6 }
+dynamic_padding = false
+opacity = 0.98
+blur = true
+dynamic_title = true
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
+
+[scrolling]
+history = 5000
+
+[font]
+size = 10.0
+offset = { x = 0, y = 1 }
+
+[font.normal]
+family = "Adwaita Mono"
+style = "Regular"
+
+[font.bold]
+style = "Bold"
+
+[font.italic]
+style = "Italic"
+
+[font.bold_italic]
+style = "Bold Italic"
+
+[selection]
+save_to_clipboard = true
+
+
+
+[keyboard]
+bindings = [
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "Insert", mods = "Shift", action = "PasteSelection" },
+    { key = "Key0", mods = "Control", action = "ResetFontSize" },
+    { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+    { key = "F11", mods = "None", action = "ToggleFullscreen" },
+    { key = "Paste", mods = "None", action = "Paste" },
+    { key = "Copy", mods = "None", action = "Copy" },
+    { key = "L", mods = "Control", action = "ClearLogNotice" },
+    { key = "PageUp", mods = "None", action = "ScrollPageUp", mode = "~Alt" },
+    { key = "PageDown", mods = "None", action = "ScrollPageDown", mode = "~Alt" },
+    { key = "Home", mods = "Shift", action = "ScrollToTop", mode = "~Alt" },
+    { key = "End", mods = "Shift", action = "ScrollToBottom", mode = "~Alt" },
+]
